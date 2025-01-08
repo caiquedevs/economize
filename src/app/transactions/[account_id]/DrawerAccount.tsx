@@ -76,7 +76,13 @@ export default function DrawerTransaction(props: Props) {
             <div className="grid gap-4 py-4">
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label className="text-right">Nome</Label>
-                <Input placeholder="Nome da conta" className="col-span-3" value={fields.name} onChange={(e) => setValue('name', e.target.value)} />
+                <Input
+                  autoFocus={true}
+                  placeholder="Nome da conta"
+                  className="col-span-3"
+                  value={fields.name}
+                  onChange={(e) => setValue('name', e.target.value)}
+                />
               </div>
             </div>
 

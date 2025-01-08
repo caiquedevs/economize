@@ -40,7 +40,7 @@ export default function Content(props: Props) {
   }, 0);
 
   return (
-    <div className="h-full flex flex-col text-sm">
+    <div className="h-full flex flex-col text-base">
       <DrawerTransaction open={openDrawer} setOpen={setOpenDrawer} data={transactionSelected!} account_id={account_id} />
 
       <header className="pt-3 pb-1 flex items-center justify-between">
@@ -115,7 +115,7 @@ export default function Content(props: Props) {
                     }}
                   >
                     <figure className="flex items-center gap-3">
-                      <Image src={transaction.uri} name={transaction.name} className="w-9 h-9 text-xs pt-0.5" />
+                      <Image src={transaction.uri} name={transaction.name} className="w-9 h-9 text-base pt-0.5" />
 
                       <figcaption className="flex flex-col">
                         <span>{transaction.name}</span>
@@ -138,12 +138,12 @@ export default function Content(props: Props) {
       </section>
 
       <footer>
-        <section className="w-full px-3 py-2 border-y border">
+        <section className="w-full px-3 pt-2 pb-8 border-y border">
           <div
             data-positive={totalMonth >= 0}
             className="flex items-center justify-between gap-2 text-[15px] font-medium data-[positive=true]:text-teal-500 text-rose-500"
           >
-            <div>
+            <div className="flex items-center gap-2">
               <span>Total</span>
               <span>{totalMonth.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</span>
             </div>
