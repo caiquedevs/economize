@@ -69,11 +69,10 @@ export default function Page() {
                     return;
                   }
 
-                  console.log('Clique simples detectado!');
                   router.replace(`/transactions/${account._id}`);
                 }}
               >
-                <div className="flex items-stretch justify-between">
+                <div className="flex items-stretch justify-between text-base">
                   <figure className="flex items-center gap-3">
                     <Image src={account.uri} name={account.name} />
                     <figcaption className="flex flex-col">

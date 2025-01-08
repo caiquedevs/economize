@@ -78,7 +78,9 @@ export default function DrawerAccount(props: Props) {
           <SheetHeader className="!px-0">
             <SheetTitle>
               <Input
+                autoFocus={true}
                 value={fields.value}
+                inputMode="numeric"
                 placeholder="00,00"
                 className="w-full h-24 border-0 border-b text-right text-3xl font-bold placeholder:text-3xl"
                 onChange={(e) => {
